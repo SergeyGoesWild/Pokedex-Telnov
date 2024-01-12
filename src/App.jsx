@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import PokemonCard from './components/PokemonCard';
+import PokemonCard from './components/PokemonCard'
+import NavBar from './components/NavBar'
 
 const pokemonList = [
 
@@ -55,8 +56,7 @@ function App() {
   return (
     <div>
       <PokemonCard pokemon={pokemon} />
-      <button onClick={clickDecr} > Previous </button>
-      <button onClick={clickIncr}> Next </button>
+      <NavBar funcPlus={clickIncr} funcMinus={clickDecr} />
     </div>
   );
 
